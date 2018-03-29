@@ -44,6 +44,6 @@ print 'X Train', X_train, '\n\nX Test', X_test, '\n\nY Train', y_train, '\n\nY T
 from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
-X_test = sc_X.transform(X_test) #Trivia : Why only transform?
+X_test = sc_X.transform(X_test) #Trivia :
 print X_train, X_test
 
