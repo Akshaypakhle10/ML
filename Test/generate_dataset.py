@@ -2,7 +2,7 @@
 import pandas as pd
 
 #Loading the dataset
-df = pd.read_csv('purchase_data_class_4.csv')
+df = pd.read_csv('orders_info.csv')
 
 #Reviewing dataset
 df.head()
@@ -19,8 +19,8 @@ df.isnull().sum()
 #Handling Missing data
 from sklearn.preprocessing import Imputer
 imputer = Imputer(missing_values = 'NaN', strategy = "mean", axis = 0)
-imputer = imputer.fit(X[:, 1:3])
-X[:, 1:3] = imputer.transform(X[:, 1:3])
+imputer = imputer.fit(X[:, :2])
+X[:, :2] = imputer.transform(X[:, 2:3])
 print X
 
 #Encoding categorical data
